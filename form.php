@@ -72,3 +72,41 @@ try {
     $erros[] = 'Erro ao acessar o banco de dados. Tente novamente.';
 }
 ?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title><?= $id ? 'Editar' : 'Novo' ?> brinquedo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><?= $id ? 'Editar' : 'Novo' ?> brinquedo</h1>
+
+  <?php foreach ($erros as $e): ?><p class="erro"><?= h($e) ?></p><?php endforeach; ?>
+
+  <form method="post">
+    <label>Nome</label>
+    <input type="text" name="nome" maxlength="100" value="<?= h($d['nome']) ?>">
+
+    <label>Categoria</label>
+    <input type="text" name="categoria" maxlength="50" value="<?= h($d['categoria']) ?>">
+
+    <label>Faixa etária</label>
+    <select name="faixa_etaria">
+      <option value="">Selecione...</option>
+      <?php foreach ($faixas as $f): ?>
+        <option value="<?= h($f) ?>" <?= $d['faixa_etaria'] === $f ? 'selected' : '' ?>><?= h($f) ?></option>
+      <?php endforeach; ?>
+    </select>
+
+    <label>Preço (R$)</label>
+    <input type="text" name="preco" placeholder="0,00" value="<?= h($d['preco']) ?>">
+
+    <label>Estoque</label>
+    <input type="number" name="estoque" min="0" value="<?= h($d['estoque']) ?>">
+
+    <button class="btn">Salvar</button>
+    <a href="index.php">Cancelar</a>
+  </form>
+</body>
+</html>
