@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS brinquedos (
   faixa_etaria VARCHAR(30) NOT NULL,
   preco DECIMAL(10,2) NOT NULL,
   estoque INT NOT NULL DEFAULT 0
-  ed int not null default 0
 );
 
 INSERT INTO brinquedos (nome, categoria, faixa_etaria, preco, estoque) VALUES

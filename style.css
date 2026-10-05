@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; background: #f4f6fb; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 8px 10px; border-bottom: 1px solid #ddd; text-align: left; }
+th { background: #e6e3fb; }
+.btn { display: inline-block; padding: 6px 12px; border: 1px solid #aaa; border-radius: 5px; background: #fff; color: #222; text-decoration: none; cursor: pointer; font-size: 14px; }
+.perigo { background: #e63946; border-color: #e63946; color: #fff; }
+.msg { background: #d8f5e0; padding: 10px; border-radius: 5px; }
+.erro { background: #fde2e2; padding: 10px; border-radius: 5px; color: #7f1d1d; }
+form label { display: block; margin-top: 12px; font-weight: bold; }
+form input, form select { width: 100%; max-width: 400px; padding: 8px; box-sizing: border-box; }
+form button { margin-top: 16px; }
